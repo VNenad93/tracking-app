@@ -4,6 +4,10 @@ import profilePic from './svgs/image-jeremy.png'
 
 export default function Profile(props) {
 
+    const styles = {
+        color: props.color
+    }
+
     return (
         
         <div id="cardContainer" className="p-32 relative bg-veryBlue lg:row-span-2 rounded-3xl text-desBlue">
@@ -22,9 +26,9 @@ export default function Profile(props) {
                 text-2xl h-full
                 flex justify-around items-center 
                 lg:flex-col lg:items-start lg:pl-10 lg:text-xl lg:py-4">
-                    <a href="#" className="hover:text-paleBlue transition-all" onClick={props.daily} >Daily</a>
-                    <a href="#" className="hover:text-paleBlue transition-all" onClick={props.weekly} >Weekly</a>
-                    <a href="#" className="hover:text-paleBlue transition-all" onClick={props.monthly} >Monthly</a>
+                    <a href="#" style={styles} className="hover:text-paleBlue transition-all" onClick={props.daily} >Daily</a>
+                    <a href="#" style={styles} className="hover:text-paleBlue transition-all" onClick={props.weekly} >Weekly</a>
+                    <a href="#" style={styles} className="hover:text-paleBlue transition-all" onClick={props.monthly} >Monthly</a>
                 </div>
             </div>
         </div>
