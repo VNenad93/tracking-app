@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    body {
+        min-height: 100vh;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@layer components {
+    .large {
+        @apply p-10;
+    }
+}
+
+
