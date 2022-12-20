@@ -1,5 +1,12 @@
 import React from "react";
 import { ReactComponent as Dots } from './svgs/icon-ellipsis.svg';
+import Study from './svgs/icon-study.svg';
+import work from './svgs/icon-work.svg';
+import exercise from './svgs/icon-exercise.svg';
+import play from './svgs/icon-play.svg';
+import social from './svgs/icon-social.svg';
+import self from './svgs/icon-self-care.svg';
+
 
 
 export default function Card(props) {
@@ -10,27 +17,27 @@ export default function Card(props) {
     switch(props.name) {
         case 'Work':
             color = 'hsl(15, 100%, 70%)';
-            backImg = '/src/svgs/icon-work.svg'
+            backImg = work
             break;
         case 'Play':
             color = 'hsl(195, 74%, 62%)';
-            backImg = '/src/svgs/icon-play.svg'
+            backImg = play
             break;
         case 'Study':
             color = 'hsl(348, 100%, 68%)';
-            backImg = '/src/svgs/icon-study.svg'
+            backImg = Study
             break;
         case 'Exercise':
             color = 'hsl(145, 58%, 55%)';
-            backImg = '/src/svgs/icon-exercise.svg'
+            backImg = exercise
             break;
         case 'Social':
             color = 'hsl(264, 64%, 52%)';
-            backImg = '/src/svgs/icon-social.svg'
+            backImg = social
             break;
         case 'Self Care':
             color = 'hsl(43, 84%, 65%)';
-            backImg = '/src/svgs/icon-self-care.svg'
+            backImg = self
             break
         default: 'yezzir'
     }
@@ -61,7 +68,7 @@ export default function Card(props) {
             </div>
             <div id="backCard" className="overflow-hidden absolute w-full lg:h-1/5 h-1/4  top-0 left-0 rounded-t-3xl">
                 <div className=" w-fit ml-auto px-10 scale-[1.6] mt-2">
-                    <img src={backImg} />
+                    <img src={backImg} alt=""/>
                 </div>
             </div>
         </div>
