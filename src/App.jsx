@@ -5,34 +5,48 @@ import Profile from "./Profile";
 import Data from './data.json/'
 import { data } from "autoprefixer";
 
+
 function App() {
 
 
   const [current, setCurrent] = useState(Data.map((e, index) => {
-    return <Card key={index} name={e.title} current={e.timeframes.daily.current} previous={e.timeframes.daily.previous} />
+    return <Card  last={'last week'} 
+                  key={index} 
+                  name={e.title} 
+                  current={e.timeframes.weekly.current} 
+                  previous={e.timeframes.weekly.previous} />
   }))
-
-  const [color, setColor] = useState('')
 
   function daily() {
 
-    setColor('#fff')
 
     setCurrent(Data.map((e, index) => {
-      return <Card key={index} name={e.title} current={e.timeframes.daily.current} previous={e.timeframes.daily.previous} />
+      return <Card  last={'yesterday'} 
+                    key={index} 
+                    name={e.title} 
+                    current={e.timeframes.daily.current} 
+                    previous={e.timeframes.daily.previous} />
       
     }))
   }
 
   function weekly() {
     setCurrent(Data.map((e, index) => {
-      return <Card key={index} name={e.title} current={e.timeframes.weekly.current} previous={e.timeframes.weekly.previous} />
+      return <Card last={'last week'} 
+                    key={index} 
+                    name={e.title} 
+                    current={e.timeframes.weekly.current} 
+                    previous={e.timeframes.weekly.previous} />
     }))
   }
 
   function monthly() {
     setCurrent(Data.map((e, index) => {
-      return <Card key={index} name={e.title} current={e.timeframes.monthly.current} previous={e.timeframes.monthly.previous} />
+      return <Card  last={'last month'} 
+                    key={index} 
+                    name={e.title} 
+                    current={e.timeframes.monthly.current} 
+                    previous={e.timeframes.monthly.previous} />
     }))
   }
 
@@ -46,7 +60,7 @@ function App() {
         <Profile  daily={daily}
                   weekly={weekly}
                   monthly={monthly}
-                  color={color}
+                  
         />
         {current}
       </section>

@@ -10,6 +10,18 @@
         min-height: 100vh;
     }
 
+    input[type="radio"] + label {
+        transition: 600ms;
+    }
+
+    input[type="radio"]:checked + label{
+        color: #fff;
+        transition: 500ms;
+    }
+
+    .animation {
+        transition: 600ms;
+    }
 
     *,
     *::before,
@@ -20,12 +32,6 @@
     h1 {
         padding: 0;
         margin: 0;
-    }
-}
-
-@layer components {
-    .large {
-        @apply p-10;
     }
 }
 

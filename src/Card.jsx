@@ -48,10 +48,10 @@ export default function Card(props) {
 
     return (
 
-        <div id="cardContainer" className="p-28  rounded-t-3xl rounded-b-[30px] relative" style={styles}>
-            <div id="frontCard" className="px-8 absolute w-full lg:h-4/5 h-3/4 bg-veryBlue rounded-3xl bottom-0 right-0">
-                <div id="textContainer" className="text-paleBlue h-full py-8 flex flex-col justify-around">
-                    <div id="topContainer" className="flex items-center justify-between ">
+        <div className="p-28  rounded-t-3xl rounded-b-[30px] relative" style={styles}>
+            <div className="px-8 absolute w-full lg:h-4/5 h-3/4 bg-veryBlue rounded-3xl bottom-0 right-0">
+                <div className="text-paleBlue h-full py-8 flex flex-col justify-around">
+                    <div className="flex items-center justify-between ">
                         <h2 className="text-xl font-medium text-white">
                             {props.name}
                         </h2>
@@ -59,15 +59,15 @@ export default function Card(props) {
                             <Dots />
                         </div>
                     </div>
-                    <div id="bottomContainer" className="flex justify-between items-center
+                    <div className="flex justify-between items-center
                                                         lg:flex-col lg:items-start">
-                        <h1 className="text-[40px] lg:text-[54px] text-white font-light">{props.current}hrs</h1>
-                        <h2>Last Week - {props.previous}hrs</h2>
+                        <h1 className="text-[40px] lg:text-[54px] text-white font-light trans">{props.current}hrs</h1>
+                        <h2>{props.last} - {props.previous}hrs</h2>
                     </div>
                 </div>
             </div>
-            <div id="backCard" className="overflow-hidden absolute w-full lg:h-1/5 h-1/4  top-0 left-0 rounded-t-3xl">
-                <div className=" w-fit ml-auto px-10 scale-[1.6] mt-2">
+            <div className="overflow-hidden absolute w-full lg:h-1/5 h-1/4  top-0 left-0 rounded-t-3xl">
+                <div className=" w-fit ml-auto px-4 ">
                     <img src={backImg} alt=""/>
                 </div>
             </div>
