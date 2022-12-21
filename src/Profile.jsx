@@ -18,10 +18,10 @@ export default function Profile(props) {
             <div className="bg-blue absolute w-full top-0 left-0 h-2/3 rounded-3xl z-10">
                 <div className="flex items-center h-full justify-evenly
                                 lg:flex-col lg:pl-10 lg:pb-10 lg:items-start lg:leading-tight">
-                    <img className="w-16 lg:w-20 border-solid border-2 border-white rounded-full" src={profilePic} alt="" />
+                    <img className="w-20 border-solid border-2 border-white rounded-full" src={profilePic} alt="" />
                     <div>
                         <h2 className="text-xl lg:text-lg text-paleBlue">Report for</h2>
-                        <h1 className="lg:text-[38px] text-xl leading-10 text-white font-light">Jeremy Robson</h1>
+                        <h1 className="lg:text-[38px] text-3xl leading-10 text-white font-light">Jeremy Robson</h1>
                     </div>
                 </div>
             </div>
